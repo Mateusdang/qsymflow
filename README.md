@@ -37,7 +37,7 @@ Estrutura modular para expansão e customização
 Instale via pip:
 
 
-``` bash
+``` python
 pip install qsymflow
 ```
 
@@ -53,7 +53,7 @@ pip install -e .
 
 **Python**
 
-```bash
+```python
 from qsymflow.core import qinit, qrule, qmeasure
 
 qinit()
