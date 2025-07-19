@@ -134,5 +134,9 @@ https://github.com/Mateusdang
 Distribuído sob a licença MIT. Veja LICENSE para mais informações.
 
 
-⭐ Agradecimentos
+**⭐ Agradecimentos**
+
 Este projeto utiliza a biblioteca logicflowengine para avaliação lógica de expressões.
+```bash
+https://pypi.org/project/logicflowengine/
+```
