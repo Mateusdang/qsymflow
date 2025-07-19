@@ -137,6 +137,5 @@ Distribuído sob a licença MIT. Veja LICENSE para mais informações.
 **⭐ Agradecimentos**
 
 Este projeto utiliza a biblioteca logicflowengine para avaliação lógica de expressões.
-```bash
+
 https://pypi.org/project/logicflowengine/
-```
