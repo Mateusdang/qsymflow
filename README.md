@@ -28,27 +28,33 @@ Integração transparente com a biblioteca logicflowengine
 
 Estrutura modular para expansão e customização
 
-🚀 Instalação
 
-Requer Python 3.7+.
+## 🚀 Instalação
+
+**Requer Python 3.7+.**
+
 
 Instale via pip:
 
-Bash
+**Bash**
 
+``` bash
 pip install qsymflow
+```
+
 Ou, para instalação local em modo editável (desenvolvimento):
 
-Bash
-
+**Bash**
+```bash
 git clone https://github.com/Mateusdang/qsymflow.git
 cd qsymflow
 pip install -e .
-
+```
 📚 Exemplo de Uso
 
-Python
+**Python**
 
+```bash
 from qsymflow.core import qinit, qrule, qmeasure
 
 qinit()
@@ -56,11 +62,12 @@ qrule("(temperatura > 30 and umidade < 50) or alerta")
 sensor = {"temperatura": 32, "umidade": 45, "alerta": False}
 decisao = qmeasure(sensor)
 print(f"Decisão: {decisao}")
+```
 
 📁 Estrutura do Projeto
 
-Arduino
-
+**Arduino**
+```bash
 qsymflow/
 ├── __init__.py
 ├── core.py
@@ -72,13 +79,14 @@ README.md
 setup.py
 requirements.txt
 pyproject.toml
+```
 
 ⚙️ Executando o projeto
 
 Após a instalação, você pode rodar o simulador interativo:
 
-Bash
-
+**Bash**
+```bash
 python -m qsymflow.main
 
 Para executar o exemplo Bell State:
@@ -86,6 +94,7 @@ Para executar o exemplo Bell State:
 Bash
 
 python -m qsymflow.examples.bell_state
+```
 
 📦 Deploy & Distribuição
 
@@ -94,24 +103,31 @@ Ter Python 3.7+
 
 Criar ambiente virtual (opcional, recomendado):
 
-Bash
-
+**Bash**
+```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\\Scripts\\activate     # Windows
+```
 2. Instalar dependências
-Bash
 
+**Bash**
+```bash
 pip install -r requirements.txt
+```
 3. Instalar pacote localmente
-Bash
 
+**Bash**
+```bash
 pip install -e .
+```
+
 4. Testar execução local
-Bash
 
+**Bash**
+```bash
 python -m qsymflow.main
-
+```
 
 
 
