@@ -1,6 +1,6 @@
 QSymFlow – Quantum Symbolic Flow Language
 
-📖 Descrição
+## 📖 Descrição
 
 QSymFlow é uma linguagem simbólica de domínio específico (DSL) implementada em Python para modelagem e simulação de sistemas quânticos utilizando expressões lógicas e regras simbólicas.
 
@@ -16,7 +16,7 @@ Ensino e visualização de fenômenos quânticos
 
 Pesquisas em AI híbrida com regras simbólicas
 
-⚙️ Funcionalidades
+## ⚙️ Funcionalidades
 
 Inicialização simbólica de sistemas quânticos
 
@@ -36,7 +36,6 @@ Estrutura modular para expansão e customização
 
 Instale via pip:
 
-**Bash**
 
 ``` bash
 pip install qsymflow
@@ -44,13 +43,13 @@ pip install qsymflow
 
 Ou, para instalação local em modo editável (desenvolvimento):
 
-**Bash**
 ```bash
 git clone https://github.com/Mateusdang/qsymflow.git
 cd qsymflow
 pip install -e .
 ```
-📚 Exemplo de Uso
+
+## 📚 Exemplo de Uso
 
 **Python**
 
@@ -64,7 +63,7 @@ decisao = qmeasure(sensor)
 print(f"Decisão: {decisao}")
 ```
 
-📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 **Arduino**
 ```bash
@@ -81,11 +80,10 @@ requirements.txt
 pyproject.toml
 ```
 
-⚙️ Executando o projeto
+## ⚙️ Executando o projeto
 
-Após a instalação, você pode rodar o simulador interativo:
+**Após a instalação, você pode rodar o simulador interativo:**
 
-**Bash**
 ```bash
 python -m qsymflow.main
 
@@ -96,14 +94,13 @@ Bash
 python -m qsymflow.examples.bell_state
 ```
 
-📦 Deploy & Distribuição
+## 📦 Deploy & Distribuição
 
 1. Preparar o ambiente
 Ter Python 3.7+
 
 Criar ambiente virtual (opcional, recomendado):
 
-**Bash**
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
@@ -111,28 +108,26 @@ venv\\Scripts\\activate     # Windows
 ```
 2. Instalar dependências
 
-**Bash**
 ```bash
 pip install -r requirements.txt
 ```
 3. Instalar pacote localmente
 
-**Bash**
 ```bash
 pip install -e .
 ```
 
 4. Testar execução local
 
-**Bash**
 ```bash
 python -m qsymflow.main
 ```
 
 
 
-👨‍💻 Autor
-Mateus Santos
+## 👨‍💻 Autor
+
+Mateus Dang
 https://github.com/Mateusdang
 
 📄 Licença
