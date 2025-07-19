@@ -1,0 +1,2 @@
+[console_scripts]
+qsymflow = qsymflow.main:main
