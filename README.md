@@ -49,19 +49,63 @@ cd qsymflow
 pip install -e .
 ```
 
-## 📚 Exemplo de Uso
+## 🔬 Exemplos Práticos de Computação Quântica Simbólica
 
-**Python**
+**🔁 1. Simulação de Entrelaçamento (Bell State)**
 
 ```python
+# Arquivo: examples/bell_state.py
+from qsymflow.core import qinit, qrule, qmeasure
+
+# Inicializa o sistema simbólico
+qinit()
+
+# Regra representando entrelaçamento: se q0 é 1, q1 também deve ser 1
+qrule("(q0 and q1) or (not q0 and not q1)")
+
+# Simulação de um estado entrelaçado (Bell)
+estado = {"q0": True, "q1": True}
+resultado = qmeasure(estado)
+print("Resultado entrelaçado:", resultado)
+
+```
+💡 Neste exemplo, simulamos um estado Bell onde q0 e q1 devem sempre estar em sincronia. Isso representa o entrelaçamento quântico de forma simbólica e lógica. 
+
+**🎯 2. Colapso de Estado após Medição**
+```python
+# Arquivo: examples/measure_collapse.py
 from qsymflow.core import qinit, qrule, qmeasure
 
 qinit()
-qrule("(temperatura > 30 and umidade < 50) or alerta")
-sensor = {"temperatura": 32, "umidade": 45, "alerta": False}
-decisao = qmeasure(sensor)
-print(f"Decisão: {decisao}")
+
+# Regra que simula o colapso de um qubit ao ser medido
+qrule("spin == 'up' or spin == 'down'")
+
+# Simulando leitura com spin indefinido
+estado = {"spin": "up"}
+print("Estado medido:", qmeasure(estado))
+
 ```
+💡 Aqui mostramos como simular a medição quântica: ao observar o sistema, ele assume um valor definido — uma abstração simbólica do colapso da função de onda.
+
+**🧠 3. Sistema de Decisão Quântico-Simbólico**
+
+```python
+# Arquivo: examples/quantum_decision.py
+from qsymflow.core import qinit, qrule, qmeasure
+
+qinit()
+
+# Regras que representam decisões baseadas em condições
+qrule("risco_alto and not backup_ativo")
+
+entrada = {"risco_alto": True, "backup_ativo": False}
+decisao = qmeasure(entrada)
+
+print("Ação necessária:", decisao)  # True = risco sem backup
+
+```
+💡 Este exemplo ilustra como sistemas inteligentes podem usar lógica simbólica inspirada na incerteza quântica para tomar decisões sob ambiguidade.
 
 ## 📁 Estrutura do Projeto
 
@@ -72,8 +116,11 @@ qsymflow/
 ├── core.py
 ├── logic_engine.py
 ├── main.py
-├── examples/
-│   └── bell_state.py
+├── qsymflow/
+└── examples/
+    ├── bell_state.py
+    ├── measure_collapse.py
+    └── quantum_decision.py
 README.md
 setup.py
 requirements.txt
@@ -89,9 +136,16 @@ python -m qsymflow.main
 
 Para executar o exemplo Bell State:
 
-Bash
 
+# Entrelaçamento Bell
 python -m qsymflow.examples.bell_state
+
+# Medição simbólica
+python -m qsymflow.examples.measure_collapse
+
+# Decisão baseada em risco
+python -m qsymflow.examples.quantum_decision
+
 ```
 
 ## 📦 Deploy & Distribuição
